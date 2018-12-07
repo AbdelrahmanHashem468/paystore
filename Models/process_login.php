@@ -3,6 +3,7 @@ session_start();
 
 include_once './DataBase.php';
 include_once '../Controllers/Admin.php';
+include_once '../rsa.class.php';
     $file_name = './credential.php';
     $db = DataBase::getInstance($file_name);
     $conn = $db->get_connection();include_once '../rsa.class.php';
@@ -28,6 +29,8 @@ if($email == $admin->email) {
 
     $my_query = "SELECT email FROM customer";
     $result = mysqli_query($conn, $my_query);
+    $customer = $db->fetch_query($result);
+    echo "<script>console.log(".var_dump($customer).");</script>"; 
     $result= $RSA->decrypt($result[0][0], $keys[2], $keys[0]);
 
     if(!$result) {

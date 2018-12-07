@@ -47,7 +47,7 @@ if(isset($_REQUEST['email'])&&isset($_REQUEST['password'])&&isset($_REQUEST['nam
             } else {
                 include_once '../Controllers/Customer.php';
                 $cu=new Customer();
-                $pass=(int)str_replace(' ', '', $cu->$password);
+                $pass= $_POST['password'];
                 
                 $name = $RSA->encrypt ($name, $keys[1], $keys[0], 5); 
                 $age = $RSA->encrypt ($age, $keys[1], $keys[0], 5); 

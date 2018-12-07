@@ -36,7 +36,7 @@ if(isset($_SESSION['admin_id'])||isset($_SESSION['s_id']) ) {
         <div class="contr">
             
             <div class="my_form">
-                <form action="../Models/process_register.php" method="post">
+                <form action="../Models/myregister.php" method="post">
                     <input class="inp" type="text"     name="name"       placeholder="First Name and Last Name" required>
                     <input class="inp" type="number"   name="age"      placeholder="Age" required>
                     <input class="inp" type="email"    name="email"    placeholder="Email" pattern="[[^;{}\()!&*+~|\/]{1,30}@.{3,10}[.]com]"  required>

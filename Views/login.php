@@ -45,7 +45,7 @@
         <div class="login-page" class="col-lg-4">
             <div class="form">
                 <p class="message">Back To Home <a href="index.php">PayStore</a></p>
-                <form class="login-form" action="../Models/process_login.php" method="post">
+                <form class="login-form" action="../Models/mylogin.php" method="post">
                     <input type="text" name="email" placeholder="Email" required/>
                     <input type="password" name="pass" placeholder="password" required/>
                     <input type="submit" class="action"  value="Login">
